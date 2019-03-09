@@ -240,3 +240,8 @@ val equal: t -> t -> bool
 external format : string -> int64 -> string = "caml_int64_format"
 (** Do not use this deprecated function.  Instead,
    used {!Printf.sprintf} with a [%L...] format. *)
+
+val range : int64 -> int64 -> int64 list
+(** [range start stop] returns the ordered list of integers starting from
+    [start] and up to [stop] (inclusive).
+*)

@@ -48,3 +48,11 @@ let of_string s = try Some (int_of_string s) with Failure _ -> None
 
 external format_int : string -> int -> string = "caml_format_int"
 let to_string x = format_int "%d" x
+
+let range start stop =
+  let rec aux start stop acc =
+    if start <= stop
+    then aux start (pred stop) (stop :: acc)
+    else acc
+  in
+  aux start stop []

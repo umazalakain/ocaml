@@ -221,3 +221,8 @@ val equal: t -> t -> bool
 external format : string -> int32 -> string = "caml_int32_format"
 (** Do not use this deprecated function.  Instead,
    used {!Printf.sprintf} with a [%l...] format. *)
+
+val range : int32 -> int32 -> int32 list
+(** [range start stop] returns the ordered list of integers starting from
+    [start] and up to [stop] (inclusive).
+*)

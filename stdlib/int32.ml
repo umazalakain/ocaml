@@ -99,3 +99,11 @@ let unsigned_div n d =
 
 let unsigned_rem n d =
   sub n (mul (unsigned_div n d) d)
+
+let range start stop =
+  let rec aux start stop acc =
+    if start <= stop
+    then aux start (pred stop) (stop :: acc)
+    else acc
+  in
+  aux start stop []

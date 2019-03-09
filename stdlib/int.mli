@@ -142,3 +142,8 @@ val of_string : string -> int option
 
 val to_string : int -> string
 (** [to_string x] is the written representation of [x] in decimal. *)
+
+val range : int -> int -> int list
+(** [range start stop] returns the ordered list of integers starting from
+    [start] and up to [stop] (inclusive).
+*)
